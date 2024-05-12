@@ -10,11 +10,14 @@
     <h1>Bem-vindo à Reserva de Hotel</h1>
 
     <div>
-        <a href="create_reserva.php" class="link">Criar Reserva</a>
+        <a href="servico_reserva\implementacaoReserva.php" class="link">Criar Reserva</a>
     </div>
 
-    <div>
-        <a href="delete_reserva.php" class="link">Deletar Reserva</a>
+    <div> 
+        <a href="servico_cancelamento\implementacao.php" class="link">Cancelar Reserva</a>
+    </div>
+    <div> 
+        <a href="serviso_busca\implementacaoBusca.php" class="link">Quartos Disponiveis</a>
     </div>
 </body>
 </html>

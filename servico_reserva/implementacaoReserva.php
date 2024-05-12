@@ -12,13 +12,13 @@
     <?php
     // Inclua o arquivo de conexão
     include '../conexao.php';
-
+    
     // Processamento do formulário
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $quarto_id = $_POST["quarto_id"];
+        $idQuarto = $_POST["idQuarto"];
 
         // Inserir reserva no banco de dados
-        $query = "INSERT INTO reserva ( idQuarto) VALUES ( $quarto_id)";
+        $query = "INSERT INTO `reserva`( `idQuarto`) VALUES ($idQuarto)";
 
 
         if ($mysqli->query($query)) {
@@ -31,8 +31,7 @@
 
     <!-- Formulário para criar reserva -->
     <form method="post" action="">
-        
-        ID do Quarto: <input type="number" name="quarto_id" required><br>
+        ID do Quarto: <input type="number" name="idQuarto" required><br>
         <input type="submit" value="Criar Reserva">
     </form>
     <a href='../index.php'>Voltar</a>
