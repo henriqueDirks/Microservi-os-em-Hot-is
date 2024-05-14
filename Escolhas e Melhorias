@@ -1,0 +1,27 @@
+
+
+  Escolhas Arquiteturais e Tecnológicas:  
+
+1.   Arquitetura de Microsserviços  : Optamos por uma arquitetura de microsserviços devido à sua capacidade de promover escalabilidade, flexibilidade e manutenção simplificada. Cada microsserviço é responsável por uma função específica, o que facilita o desenvolvimento, implantação e evolução independente de cada componente do sistema.
+
+2.   Linguagem de Programação e Frameworks  : Escolhemos PHP como a linguagem principal devido à sua ampla adoção, vasta comunidade de desenvolvedores e capacidade de desenvolvimento rápido. Utilizamos frameworks como Laravel para agilizar o desenvolvimento e manter um código organizado e modular.
+
+3.   Comunicação entre Microsserviços  : Para a comunicação entre microsserviços, adotamos o protocolo HTTP com RESTful APIs devido à sua simplicidade e facilidade de implementação em PHP. Isso permite uma integração fácil entre os diferentes componentes do sistema, facilitando a comunicação e a troca de dados.
+
+4.   Gerenciamento de Dados e Armazenamento  : Utilizamos o MySQL como banco de dados principal devido à sua confiabilidade, desempenho e compatibilidade com PHP. O MySQL oferece recursos robustos para armazenamento e recuperação de dados, atendendo às necessidades de um sistema baseado em microsserviços.
+
+5.   Segurança  : Implementamos políticas de segurança em cada camada do sistema, incluindo autenticação com hashes seguros de senhas, autorização baseada em papéis e filtragem de entrada para prevenir ataques de injeção SQL. Também garantimos a integridade dos dados sensíveis por meio de práticas de criptografia.
+
+  Possíveis Melhorias ou Expansões:  
+
+1.   Escalonamento Automático  : Implementar uma solução de escalonamento automático para lidar com picos de carga, utilizando ferramentas como Kubernetes ou serviços de hospedagem em nuvem que oferecem recursos de escalonamento automático para microsserviços baseados em PHP e MySQL.
+
+2.   Integração Contínua e Implantação Contínua (CI/CD)  : Expandir as práticas de CI/CD para automatizar ainda mais o processo de implantação e garantir a entrega contínua de novas funcionalidades e correções de bugs em microsserviços PHP.
+
+3.   Monitoramento Avançado  : Aprimorar as capacidades de monitoramento do sistema, implementando soluções de monitoramento avançadas, como Prometheus e Grafana, para obter insights detalhados sobre o desempenho, disponibilidade e integridade dos microsserviços PHP e MySQL.
+
+4.   Implementação de Microsserviços de Cache  : Introduzir microsserviços de cache para otimizar o desempenho e reduzir a latência, armazenando dados frequentemente acessados em memória para acesso rápido em microsserviços PHP que utilizam MySQL como banco de dados.
+
+5.   Adoção de Arquitetura de Event-Driven  : Explorar a adoção de uma arquitetura orientada a eventos para tornar o sistema mais resiliente e flexível, permitindo uma comunicação assíncrona entre os microsserviços PHP por meio de mensageria.
+
+Documentar essas escolhas arquiteturais e tecnológicas, juntamente com as possíveis melhorias e expansões, garantirá uma base sólida para o desenvolvimento contínuo e a evolução do sistema ao longo do tempo, especialmente no contexto de microsserviços PHP e MySQL.
