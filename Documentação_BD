@@ -1,0 +1,57 @@
+Documentação do Banco de Dados
+
+Introdução
+
+Esta documentação descreve a estrutura do banco de dados "SistemaHoteldb", que gerencia informações relacionadas a hotéis, quartos e reservas. O banco de dados foi desenvolvido utilizando MySQL Workbench e inclui três principais entidades: "Hotel", "Quarto" e "Reserva".
+
+Estrutura do Banco de Dados
+
+Schema
+
+O banco de dados está organizado no schema "SistemaHoteldb", que contém todas as tabelas e objetos relacionados ao sistema de gerenciamento de hotéis.
+
+Entidades e Atributos
+
+Tabela: Hotel
+Esta tabela armazena informações sobre os hotéis registrados no sistema.
+idHotel: Identificador único do hotel (chave primária).
+Nome: Nome do hotel.
+Localizacao: Localização do hotel.
+
+Tabela: Quarto
+
+Esta tabela mantém informações sobre os quartos disponíveis nos hotéis.
+
+idQuarto: Identificador único do quarto (chave primária).
+idHotel: Identificador do hotel ao qual o quarto está associado (chave estrangeira).
+Disponibilidade: Indica se o quarto está disponível ou não (disponível, indisponível).
+tipo: Tipo de quarto (solteiro, casal, suíte).
+descricao: Descrição do quarto.
+
+Tabela: Reserva
+
+Esta tabela registra as reservas feitas pelos clientes nos hotéis.
+
+idReserva: Identificador único da reserva (chave primária).
+idQuarto: Identificador do quarto reservado (chave estrangeira).
+status: Status da reserva (ativa, vencida, cancelada).
+email: Endereço de e-mail do cliente que fez a reserva.
+check_in: Data de check-in dos hóspedes.
+check_out: Data de check-out dos hóspedes.
+
+Triggers
+
+Foram criados dois triggers para manter a consistência dos dados:
+
+Reserva_AFTER_INSERT: Após a inserção de uma nova reserva, atualiza a disponibilidade do quarto para "indisponível".
+Reserva_AFTER_UPDATE: Após a atualização do status de uma reserva, verifica se a reserva foi cancelada ou vencida e, nesse caso, atualiza a disponibilidade do quarto para "disponível".
+
+Configurações Adicionais
+
+O banco de dados utiliza a codificação de caracteres UTF-8.
+As tabelas são armazenadas no mecanismo InnoDB.
+Restrições de chave estrangeira foram aplicadas para garantir a integridade referencial entre as tabelas.
+
+Considerações Finais
+
+Esta documentação fornece uma visão detalhada da estrutura, atributos, triggers e configurações do banco de dados "SistemaHoteldb". Ela serve como guia para desenvolvedores, administradores de banco de dados e outros envolvidos no projeto para entenderem a organização e funcionamento do banco de dados.
